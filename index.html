@@ -15,7 +15,18 @@
 
     <!-- Custom styles for this template -->
     <link href="style.css" rel="stylesheet">
-
+<style>
+    html, body{
+  height: 100%;
+  margin:0px;
+  padding: 0px;
+}
+#particles-js{
+  width: 100%;
+  height: 100%;
+  background: #111111;
+}
+    </style>
     <!-- Custom fonts for this template -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -27,9 +38,9 @@
     <![endif]-->
 </head>
 
-<body>
+<body >
 
-<div class="site-wrapper video-background">
+<div class="site-wrapper video-background" id="particles-js">
     <!--
     Video from YouTube
     Have Questions? How To:
@@ -43,7 +54,7 @@
 
             <div class="masthead clearfix">
                 <div class="inner">
-<!--                     <h3 class="masthead-brand"><i class="fa fa-phone fa-fw"><a href="tel:1234567890"></i> (123) 456-7890<br><small>click to call <i class="fa fa-level-up"></i></small></a></h3> -->
+<!--<h3 class="masthead-brand"><i class="fa fa-phone fa-fw"><a href="tel:1234567890"></i> (123) 456-7890<br><small>click to call <i class="fa fa-level-up"></i></small></a></h3> -->
                     <nav>
                         <ul class="nav masthead-nav">
                             <li><a href="https://twitter.com/jenyelkind"><i class="fa fa-twitter fa-fw"></i></a></li>
@@ -99,6 +110,105 @@ Change UA-XXXXXXX-X to be your site's ID
 
     ga('create', 'UA-1057679-2', 'auto');
     ga('send', 'pageview');
+    
+    /* ---- particles.js config ---- */
+
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 100,
+      "density": {
+        "enable": true,
+        "value_area":1000
+      }
+    },
+    "color": {
+      "value": ["#aa73ff", "#f8c210", "#83d238", "#33b1f8"]
+    },
+    
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#fff"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.6,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 2,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 120,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": false
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
 </script>
 
 </body>
